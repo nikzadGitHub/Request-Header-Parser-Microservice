@@ -21,7 +21,7 @@ app.get("/", function (req, res) {
 
 app.get('/api/whoami',function(req,res){
 
-  let outPut = { IP : req.ip
+  let outPut = { IP : req.connection.remoteAddress
     , language : req.headers["accept-language"], software : req.headers["user-agent"] };
 
   res.json(outPut);
